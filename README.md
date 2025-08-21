@@ -1,35 +1,52 @@
+# 🍲 Local Food Wastage Analytics & Management
 
-# Food Wastage Analytics — Colab + Streamlit Repo
+## 📌 Overview
+This project focuses on analyzing local food wastage data, testing hypotheses, and building predictive models to reduce wastage.  
+It also includes a **Streamlit-based Food Wastage Management System** to connect providers (who donate food) with receivers (who need food).
 
-## Structure
-```
-Food/
-├─ app/                 # Streamlit app (DB + UI)
-│  ├─ app.py
-│  └─ Data/             # CSVs for app if you want
-├─ notebooks/
-│  └─ Food_Wastage_Colab.ipynb   # This notebook
-├─ models/
-│  
-└─ README.md
-```
+The project has two parts:
+1. **Data Analytics & Machine Learning (Colab Notebook)** → EDA, Hypothesis Testing, and Predictive Models  
+2. **Streamlit App** → A management system to view, add, search, and analyze records
 
-## Using the Colab Notebook
-1. Open Google Colab and upload `notebooks/Food_Wastage_Colab.ipynb`.
-2. Upload 4 CSVs into Colab (paths default to `/content`):
-   - `providers_data.csv`
-   - `receivers_data.csv`
-   - `food_listings_data.csv`
-   - `claims_data.csv`
-3. Run the notebook top-to-bottom.
-4. It will export `best_model_pipeline.pkl` which you can save into `models/`.
+---
 
-## Streamlit App (optional, no ML)
-- From the `Food/app/` folder, run:  
-  `streamlit run app.py`
-- App handles DB (SQLite), CRUD, and basic charts.
+## 📂 Datasets
+The project uses 4 CSV datasets:
+- `providers_data.csv` → Details of food providers  
+- `receivers_data.csv` → Details of food receivers  
+- `food_listings_data.csv` → Food donation listings  
+- `claims_data.csv` → Claim details of receivers  
 
-## GitHub Tips
-- Keep `Data/` out of the repo or use small anonymized samples.
-- Commit the notebook, app, and a small sample dataset schema (CSV headers) if needed.
-- Add a clear project overview in README and screenshots from the notebook charts.
+---
+
+## ⚙️ Tech Stack
+- **Python** (Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn)  
+- **Jupyter/Google Colab** (for EDA & ML models)  
+- **Streamlit** (for interactive web app)  
+- **SQLite** (for database management)  
+- **GitHub** (for version control & project hosting)  
+
+---
+
+## 🔍 Features
+### 📊 Data Analysis & ML
+- End-to-end **EDA** with visualizations  
+- **3 Hypotheses tested**  
+- Built **classification models** to predict claim success  
+- Compared models: Logistic Regression, Random Forest, Gradient Boosting  
+- Final chosen model: **Gradient Boosting** (best accuracy & recall)  
+
+### 🌐 Streamlit App
+- **View Data** → Explore providers, receivers, food listings, and claims  
+- **Add Record** → Add new food donation records  
+- **Search** → Find food listings by city  
+- **Analysis** → Bar chart visualization of food type distribution  
+
+---
+
+## 🚀 Setup Instructions
+
+### 🔹 1. Clone Repo
+```bash
+git clone https://github.com/your-username/food-wastage-management.git
+cd food-wastage-management
